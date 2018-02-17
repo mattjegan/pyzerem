@@ -1,6 +1,9 @@
 
-def process(func):
-    def processed():
-        return func
+import inspect
 
-    return processed
+class process(object):
+    def __init__(self, func):
+        self.func = func
+    
+    def __call__(self, *args, **kwargs):
+        return self.func(*args, **kwargs)

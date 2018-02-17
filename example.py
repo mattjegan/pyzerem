@@ -35,3 +35,6 @@ class MyFlow(Flow):
         # intermediary are available (intermediary will become
         # available after step1 above completes)
         self.output = input2 + intermediary
+
+m = MyFlow()
+m.input1 = 5
