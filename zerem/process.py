@@ -1,5 +1,4 @@
 
-import inspect
 
 class process(object):
     def __init__(self, func):
