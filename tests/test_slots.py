@@ -44,3 +44,7 @@ class TestSlots(object):
         assert slot.__get__() == test_value2
         assert slot.queue == unchanged
         assert slot.current == 2
+
+    def test_get_is_none_if_queue_empty(self):
+        slot = Slot()
+        assert slot.__get__() is None

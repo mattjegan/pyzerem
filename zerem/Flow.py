@@ -37,6 +37,9 @@ class Flow(object, metaclass=FlowMeta):
 
     def __setattr__(self, name, value):
         super(Flow, self).__setattr__(name, value)
+        if name not in self.__flow_available:
+            return
+
         self.__flow_available[name] += 1
 
         # Check if any watchers are triggered
