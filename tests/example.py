@@ -19,7 +19,7 @@ class MyFlow(Flow):
         # Besides invocation, this is a regular function. the
         # argument it receives is any python object. Let's assume
         # it is a string
-        x = input1.tolower()
+        x = input1.lower()
         if x.startswith('a'):
             y = 'foo'
         else:
