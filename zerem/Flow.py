@@ -63,6 +63,6 @@ class Flow(object, metaclass=FlowMeta):
             if arg == 'self':
                 continue
 
-            if not self.__flow_available[arg]:
+            if not self.__flow_available.get(arg, False):
                 return False
         return True
