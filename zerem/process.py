@@ -1,6 +1,10 @@
 
 
 class process(object):
+    """
+    Basic decorator that only stores the function it wraps
+    """
+
     def __init__(self, func):
         self.func = func
     
